@@ -7,6 +7,7 @@ import postApi from 'service-api/postApi'
 class App extends Component {
   componentWillMount() {
     // LIST
+    console.log('pending...')
     postApi.list()
       .then(response => response.data)
       .then(posts => {
@@ -14,6 +15,7 @@ class App extends Component {
       })
 
     // GET
+    console.log('pending...')
     postApi.get(10)
       .then(response => response.data)
       .then(post => {
@@ -21,6 +23,7 @@ class App extends Component {
       })
 
     // SAVE
+    console.log('pending...')
     postApi.save({
       userId: 1,
       title: 'Mocking an api for faster front-end development',
@@ -32,6 +35,7 @@ class App extends Component {
     })
 
     // REMOVE
+    console.log('pending...')
     postApi.remove(10)
       .then(response => response.data)
       .then(response => {
