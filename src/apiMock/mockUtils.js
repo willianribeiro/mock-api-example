@@ -1,8 +1,8 @@
 export default {
-  mockPromise
+  mockAjax
 }
 
-function mockPromise(response) {
+function mockAjax(response) {
   return new Promise((resolve, reject) => {
     console.log('pending...')
 

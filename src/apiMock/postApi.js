@@ -12,20 +12,20 @@ export default {
 // API
 function list() {
   const response = postApiJson.list
-  return mockUtils.mockPromise(response)
+  return mockUtils.mockAjax(response)
 }
 
 function get(id) {
   const response = postApiJson.get
-  return mockUtils.mockPromise(response)
+  return mockUtils.mockAjax(response)
 }
 
 function save(entry) {
   const response = postApiJson.save
-  return mockUtils.mockPromise(response)
+  return mockUtils.mockAjax(response)
 }
 
 function remove(id) {
   const response = postApiJson.remove
-  return mockUtils.mockPromise(response)
+  return mockUtils.mockAjax(response)
 }
