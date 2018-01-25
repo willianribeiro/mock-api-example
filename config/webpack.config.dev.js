@@ -88,7 +88,9 @@ module.exports = {
       // Support React Native Web
       // https://www.smashingmagazine.com/2016/08/a-glimpse-into-the-future-with-react-native-for-web/
       'react-native': 'react-native-web',
-      'service-api': '../src/apiMock/'
+      'service-api': process.env.MOCK_API === 'true'
+        ? path.resolve(__dirname, '../src/apiMock')
+        : path.resolve(__dirname, '../src/api')
     },
     plugins: [
       // Prevents users from importing files from outside of src/ (or node_modules/).
